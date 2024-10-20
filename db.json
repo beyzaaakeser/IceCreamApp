@@ -1,0 +1,34 @@
+{
+  "iceCreams": [
+    {
+      "name": "Raspberry Dream",
+      "price": 23.5,
+      "image": "/ice-4.png"
+    },
+    {
+      "name": "Chocolate Bliss",
+      "price": 34.0,
+      "image": "/ice-2.png"
+    },
+    {
+      "name": "Strawberry Swirl",
+      "price": 30.75,
+      "image": "/ice-3.png"
+    },
+    {
+      "name": "Mixed Scoops Delight",
+      "price": 45.25,
+      "image": "/ice-1.png"
+    },
+    {
+      "name": "Mint Choco Chip",
+      "price": 27.25,
+      "image": "/ice-6.png"
+    },
+    {
+      "name": "Caramel Crunch",
+      "price": 37.25,
+      "image": "/ice-5.png"
+    }
+  ]
+}
