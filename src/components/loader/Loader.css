@@ -1,0 +1,43 @@
+.loader {
+  height: 150px;
+  width: 100px;
+  border-radius: 55px 55px 10px 10px;
+  position: relative;
+  background: #d9534f; /* Ana kırmızı renk */
+  border: 1px solid white;
+  background-image: linear-gradient(
+    0deg,
+    #ff6f61 25%,
+    /* Parlak kırmızı */ #f28c8c 20%,
+    /* Açık kırmızı */ #f28c8c 20%,
+    #ff4e50 50%,
+    /* Koyu kırmızı */ #b22222 40%,
+    /* Bordoya yakın */ #ffcccb 50%,
+    /* Pembemsi açık kırmızı */ #ffcccb 75%,
+    #800000 75% /* Çok koyu kırmızı (bordo) */
+  );
+  background-position: 0px 0px;
+  background-size: auto 175px;
+  background-repeat: repeat-y;
+  animation: colorShift 2s linear infinite;
+}
+
+.loader:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 15px 2px rgba(0, 0, 0, 0.25) inset;
+  width: 32px;
+  height: 45px;
+  background: #fad8d8; /* Koyu kırmızı tonlu gölge */
+  border-radius: 0 0 12px 12px;
+  border: 1px solid white
+}
+
+@keyframes colorShift {
+  to {
+    background-position: 0 175px;
+  }
+}
