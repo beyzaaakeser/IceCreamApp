@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroCard from './HeroCard';
 
 const Hero = () => {
   return (
@@ -20,7 +21,9 @@ const Hero = () => {
         </div>
       </div>
 
-     
+     <div>
+      <HeroCard/>
+     </div>
     </div>
   );
 };
