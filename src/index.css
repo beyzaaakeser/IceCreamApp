@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .fs-1{
+       @apply text-[clamp(40px,7vw,100px)]
+    }
+    .fs-5{
+       @apply  text-[clamp(16px,2vw,26px)]
+    }
+
+
+}
