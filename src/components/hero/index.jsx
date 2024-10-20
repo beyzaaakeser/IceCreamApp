@@ -8,8 +8,7 @@ const Hero = () => {
       <div>
         <HeroBrand />
       </div>
-
-      <div>
+      <div className='flex items-center lg:justify-end'>
         <HeroCard />
       </div>
     </div>
