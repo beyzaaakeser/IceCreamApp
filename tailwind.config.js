@@ -11,7 +11,11 @@ module.exports = {
       },
       colors: {
         white: '#FFFFFF',
-        black:"#000000"
+        black: '#000000',
+      },
+      backgroundImage: {
+        'custom-gradient':
+          'linear-gradient(0deg, rgba(69,0,3,1) 0%, rgba(193,1,6,1) 100%)',
       },
     },
   },
