@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './HeroCardButton';
 
 const HeroCard = () => {
   return (
@@ -29,20 +30,12 @@ const HeroCard = () => {
       </div>
 
       <div className="mt-[40px] lg:mt-[83px]">
-        <h3 className="mb-4">Choose a Type:</h3>
+        <h3 className="mb-4 fs-5 font-medium">Choose a Type:</h3>
         <div className="flex gap-10">
-          <button className="cursor-pointer border border-white/50 bg-white/15 rounded-2xl p-3 hover:bg-white/40 transition ">
-            <img src="/cup1.svg" />
-          </button>
-          <button className="cursor-pointer border border-white/50 bg-white/15 rounded-2xl p-3  hover:bg-white/40 transition">
-            <img src="/cup2.svg" />
-          </button>
-          <button className="cursor-pointer border border-white/50 bg-white/15 rounded-2xl p-3  hover:bg-white/40 transition">
-            <img src="/cup3.svg" />
-          </button>
-          <button className="cursor-pointer border border-white/50 bg-white/15 rounded-2xl p-4 hover:bg-white/40 transition ">
-            <img src="/add.svg" />
-          </button>
+          <Button icon={"/cup1.svg"}/>
+          <Button icon={"/cup2.svg"}/>
+          <Button icon={"/cup3.svg"}/>
+          <Button icon={"/add.svg"}/>
         </div>
       </div>
     </div>
