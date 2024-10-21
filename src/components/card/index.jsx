@@ -16,6 +16,9 @@ const Card = ({ item }) => {
           selectedType={selectedType}
           setSelectedType={setSelectedType}
         />
+        <div className='mt-3'>
+          <p>₺{item.price}</p>
+        </div>
       </div>
     </div>
   );
