@@ -4,20 +4,34 @@ import SelectType from './SelectType';
 const Card = ({ item }) => {
   const [selectedType, setSelectedType] = useState(null);
   return (
-    <div className="bg-black/20 border border-white/50 rounded-3xl flex pr-5 pl-3 py-[50px] gap-8">
+    <div className="bg-black/20 border border-white/50 rounded-3xl flex pr-5 pl-3 py-[30px] gap-4 md:gap-8">
       <div className="flex items-center">
-        <img className="w-40 drop-shadow-2xl " src={item.image} alt="" />
+        <img
+          className="w-28 md:w-40 drop-shadow-2xl "
+          src={item.image}
+          alt=""
+        />
       </div>
       <div className=" flex-1">
         <h2 className="text-[24px] font-medium">{item.name}</h2>
-        <p className="mt-3">Order Type:</p>
+        <p className="mt-5">Order Type:</p>
 
         <SelectType
           selectedType={selectedType}
           setSelectedType={setSelectedType}
         />
-        <div className='mt-3'>
-          <p>₺{item.price}</p>
+
+        <div className="mt-6 flex justify-between">
+          <p className="text-lg">₺{item.price} / scoop</p>
+
+          <button
+            onClick={() => setSelectedType(null)}
+            className={`border py-1 px-3 rounded-md transition hover:bg-white/30 ${
+              !selectedType && "invisible"
+            } `}
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
