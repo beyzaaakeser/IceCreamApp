@@ -5,7 +5,6 @@ import Loader from '../loader/Loader';
 import Error from '../error/Error';
 import Card from '../card';
 
-
 const List = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -20,8 +19,6 @@ const List = () => {
       .finally(() => setIsLoading(false));
   }, []);
 
-  console.log(isLoading, data, error);
-
   return (
     <div className="mt-7 lg:mt-[120px]">
       <TrendButton />
@@ -32,10 +29,10 @@ const List = () => {
         <Error info={error} />
       ) : (
         data && (
-          <div className='mt-8 grid lg:grid-cols-2 gap-4 lg:gap-8'>
-            {data.map((item,index) => (
-              <div>
-                <Card item={item} key={index}/>
+          <div className="mt-8 grid lg:grid-cols-2 gap-4 lg:gap-8">
+            {data.map((item, index) => (
+              <div key={index}>
+                <Card item={item} />
               </div>
             ))}
           </div>

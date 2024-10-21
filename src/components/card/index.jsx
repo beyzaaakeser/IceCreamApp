@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import SelectType from './SelectType';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartSlice';
 
 const Card = ({ item }) => {
   const [selectedType, setSelectedType] = useState(null);
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(addToCart({item,selectedType}))
+    setSelectedType(null);
+  };
+
   return (
     <div className="bg-black/20 border border-white/50 rounded-3xl flex pr-5 pl-3 py-[30px] gap-4 md:gap-8">
       <div className="flex items-center">
@@ -25,9 +34,9 @@ const Card = ({ item }) => {
           <p className="text-lg">₺{item.price} / scoop</p>
 
           <button
-            onClick={() => setSelectedType(null)}
+            onClick={handleClick}
             className={`border py-1 px-3 rounded-md transition hover:bg-white/30 ${
-              !selectedType && "invisible"
+              !selectedType && 'invisible'
             } `}
           >
             Add to Cart
