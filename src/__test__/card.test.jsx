@@ -42,11 +42,10 @@ describe('Card Component', () => {
 
     expect(btn).toHaveClass('invisible');
 
-    // külahta seçeneğini seç
+   
     const typeBtn = screen.getByRole('button', { name: 'Cone' });
     fireEvent.click(typeBtn);
 
-    // ekranda spete ekle butonu görünür
     expect(btn).not.toHaveClass('invisible');
   });
 
