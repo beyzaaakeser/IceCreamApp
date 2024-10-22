@@ -37,4 +37,14 @@ describe('Select Type Component', () => {
     expect(cupBtn).not.toHaveClass('bg-white text-black shadow-lg');
   });
 
+  it('changes the button background color when Cup is selected', () => {
+    render(<SelectType selectedType="cup" setSelectedType={mockFn} />);
+
+    const cornetBtn = screen.getByRole('button', { name: 'Cone' });
+    const cupBtn = screen.getByRole('button', { name: 'Cup' });
+
+    expect(cupBtn).toHaveClass('bg-white text-black shadow-lg');
+
+    expect(cornetBtn).not.toHaveClass('bg-white text-black shadow-lg');
+  });
 });
