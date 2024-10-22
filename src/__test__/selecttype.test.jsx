@@ -26,5 +26,15 @@ describe('Select Type Component', () => {
     expect(mockFn).toHaveBeenCalledWith('cup');
   });
 
+  it('changes the button background color when Cornet is selected', () => {
+    render(<SelectType selectedType="cornet" setSelectedType={mockFn} />); 
+
+    const cornetBtn = screen.getByRole('button', { name: 'Cone' });
+    const cupBtn = screen.getByRole('button', { name: 'Cup' });
+
+    expect(cornetBtn).toHaveClass('bg-white text-black shadow-lg');
+
+    expect(cupBtn).not.toHaveClass('bg-white text-black shadow-lg');
+  });
 
 });
