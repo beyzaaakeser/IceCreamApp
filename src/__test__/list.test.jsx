@@ -33,15 +33,6 @@ describe('List component test', () => {
     await waitFor(() => screen.getByText(errMsg));
   });
 
-  it('If an error comes from the API, an error message will appear on the screen.', async () => {
-    const errMsg = 'Request timeout';
-    api.get.mockRejectedValueOnce(new Error(errMsg));
-
-    render(<List />);
-
-    await waitFor(() => screen.getByText(errMsg));
-  });
-
   it('If a successful response is received from the API, cards are displayed on the screen', async () => {
     Card.mockImplementation(({ item }) => <div>{item.name}</div>);
 
