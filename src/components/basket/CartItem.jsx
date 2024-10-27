@@ -14,7 +14,7 @@ const CartItem = ({ item }) => {
       </div>
 
       <div className="flex items-center gap-3">
-        <AmountPicker amount={item.quantity} />
+        <AmountPicker item={item} />
         <p className="text-lg md:text-xl min-w-[70px] text-end font-semibold text-gray-600">
           {item.price * item.quantity}₺
         </p>

@@ -1,20 +1,24 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart, deleteFromCart } from '../../redux/cartSlice';
 
-const AmountPicker = ({ amount }) => {
+const AmountPicker = ({ item }) => {
+  const dispatch = useDispatch();
   return (
     <div>
       <div className={`flex border rounded-md `}>
         <button
-          disabled={amount === 0}
           className="px-3 py-1 border-r hover:bg-white/30 transition"
-          onClick={() => {}}
+          onClick={() => dispatch(deleteFromCart(item))}
         >
           -
         </button>
-        <span className="w-8 text-center py-1">{amount}</span>
+        <span className="w-8 text-center py-1">{item.quantity}</span>
         <button
           className="px-3  py-1 border-l hover:bg-white/30 transition"
-          onClick={() => {}}
+          onClick={() =>
+            dispatch(addToCart({ item, selectedType: item.selectedType }))
+          }
         >
           +
         </button>
