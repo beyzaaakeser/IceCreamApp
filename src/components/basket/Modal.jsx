@@ -21,11 +21,15 @@ const Modal = ({ isOpen, close }) => {
           </div>
 
           <div>
-            {cart.map((item, index) => (
-              <CartItem item={item} key={index} />
-            ))}
+            {cart.length === 0 ? (
+              <p className="py-5 border-b text-lg font-semibold text-center text-gray-600">
+                Your cart is currently empty
+              </p>
+            ) : (
+              cart.map((item, index) => <CartItem item={item} key={index} />)
+            )}
           </div>
-          <CartInfo cart={cart}/>
+          <CartInfo cart={cart} close={close} />
         </div>
       </div>
     )
