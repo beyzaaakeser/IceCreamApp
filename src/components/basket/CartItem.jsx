@@ -3,7 +3,7 @@ import AmountPicker from '../card/AmountPicker';
 
 const CartItem = ({ item }) => {
   return (
-    <div className="flex justify-between items-center border-b py-5">
+    <div className="flex justify-between items-center border-b py-5 gap-5">
       <div className="flex items-center gap-1">
         <img src={item.image} className="w-[80px] md:w-[100px]" alt="" />
 
@@ -15,7 +15,7 @@ const CartItem = ({ item }) => {
 
       <div className="flex items-center gap-3">
         <AmountPicker amount={item.quantity} />
-        <p className="text-lg md:text-xl min-w-[70px] text-end">
+        <p className="text-lg md:text-xl min-w-[70px] text-end font-semibold text-gray-600">
           {item.price * item.quantity}₺
         </p>
       </div>

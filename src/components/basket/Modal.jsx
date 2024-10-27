@@ -25,7 +25,7 @@ const Modal = ({ isOpen, close }) => {
               <CartItem item={item} key={index} />
             ))}
           </div>
-          <CartInfo />
+          <CartInfo cart={cart}/>
         </div>
       </div>
     )
