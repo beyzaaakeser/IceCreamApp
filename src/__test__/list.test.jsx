@@ -3,9 +3,11 @@ import List from '../components/list';
 import api from '../api';
 import { mockArray } from '../constants';
 import Card from '../components/card';
+import Cart from '../components/basket';
 
 jest.mock('../api');
 jest.mock('../components/card');
+jest.mock('../components/basket');
 
 describe('List component test', () => {
   beforeEach(() => {
