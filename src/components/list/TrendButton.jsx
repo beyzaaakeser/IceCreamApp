@@ -5,7 +5,7 @@ const TrendButton = () => {
     <div className="flex justify-end ">
       <button
         className=" relative flex items-center gap-2 text-black text-[20px]  lg:text-[24px]  
-    font-semibold bg-white rounded-full px-4 pr-12 py-1 hover:bg-white/75 transition"
+    font-semibold bg-white rounded-full px-4 pr-12 py-1 hover:bg-white/75 transition "
       >
         Trending
         <img
