@@ -24,3 +24,12 @@ export const mockArray = [
     id: 'bt93',
   },
 ];
+
+export const mockItem = {
+  name: 'Raspberry Dream',
+  price: 23.5,
+  image: '/ice-3.png',
+  id: '610b',
+  selectedType: 'cornet',
+  quantity: 2,
+};
