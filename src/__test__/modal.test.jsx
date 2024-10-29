@@ -72,6 +72,16 @@ describe('Modal Component', () => {
   });
 
   it('Closes when the X button is clicked', async () => {
-  
+    const user = userEvent.setup();
+
+    useSelector.mockReturnValue({ cart: [] });
+
+    render(<Modal isOpen close={closeMock} />);
+
+    const btn = screen.getByTestId("close");
+
+    await user.click(btn);
+
+    expect(closeMock).toHaveBeenCalled(); 
   });
 });
