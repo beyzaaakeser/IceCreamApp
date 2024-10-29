@@ -9,13 +9,16 @@ jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
 }));
 
-jest.mock('../components/basket/CartItem', () =>
-  jest.fn(() => <div data-testid="cart-item"></div>)
-);
+jest.mock('../components/basket/CartItem', () => () => (
+  <div data-testid="cart-item" />
+));
+
 jest.mock('../components/basket/CartInfo');
 
 describe('Modal Component', () => {
+
   const closeMock = jest.fn();
+
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -32,9 +35,43 @@ describe('Modal Component', () => {
     screen.getByTestId('modal');
   });
 
-  it('Renders the message when basket is empty ', () => {});
+  it('Renders the message when basket is empty ', () => {
+    useSelector.mockReturnValue({ cart: [] });
 
-  it('Renders cart items when cart is not empty', () => {});
+    const { rerender } = render(<Modal isOpen close={closeMock} />);
 
-  it('Closes when the X button is clicked', () => {});
+    screen.getByText('Your cart is currently empty');
+
+    const cartItems = [{ id: 1, name: 'Product 1' }];
+    useSelector.mockReturnValue({ cart: cartItems });
+
+    rerender(<Modal isOpen={true} close={closeMock} />);
+
+    expect(screen.queryByText(/empty/)).not.toBeInTheDocument();
+  });
+
+  it('Renders cart items when cart is not empty', () => {
+    const cartItems = [
+      { id: 1, name: 'Product 1' },
+      { id: 2, name: 'Product 2' },
+    ];
+
+    useSelector.mockReturnValue({ cart: cartItems });
+
+    const { rerender } = render(<Modal isOpen={true} close={closeMock} />);
+
+    const items = screen.getAllByTestId('cart-item');
+
+    expect(items.length).toBe(2);
+
+    useSelector.mockReturnValue({ cart: [] });
+
+    rerender(<Modal isOpen={true} close={closeMock} />);
+
+    expect(screen.queryByTestId('cart-item')).not.toBeInTheDocument();
+  });
+
+  it('Closes when the X button is clicked', async () => {
+  
+  });
 });
