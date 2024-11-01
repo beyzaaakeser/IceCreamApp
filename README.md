@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+<h1>My Ice Cream Project</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This ice cream ordering application allows users to browse through various ice cream options, select the type of ice cream they want (cup or cone), and add it to their cart. It has user-friendly features such as instant cart updates and dynamic changes in the total price.
+React-Redux is preferred for state management, allowing users to instantly update their cart actions.
+The application allows users to increase, decrease, or completely remove ice creams from their cart. During these actions, the total price and number of products in the cart are automatically updated. The cart status is managed with Redux, and performance is optimized thanks to the powerful state management features of @reduxjs/toolkit.
+We ensured that the application is user-friendly and navigable with React-Router-Dom. A responsive and modern interface was designed with TailwindCSS. The structure, which adapts to different screen sizes, allows users to have a comfortable shopping experience on mobile and desktop devices.
+Tests were written with @testing-library to ensure the reliability of the application. Test tools provided with Jest-DOM ensure that the components work correctly and user interactions result as expected.
 
-## Available Scripts
+<h2> The following technologies were used in the frontend development phase of my site: </h2>
 
-In the project directory, you can run:
+- React
+- React-Router-Dom
+- React-Redux
+- Redux-Mock-Store
+- Axios
+- Tailwind CSS
+- React-Icons
 
-### `npm start`
+ <h4>GIF</h5>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![](/public/ice-cream.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h4>IMAGES</h4>
 
-### `npm test`
+<h5>Main Page</h5>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![](/public/main1.png)
 
-### `npm run build`
+<h5>Ice Creams Page</h5>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](/public/main2.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h5>Basket Page</h5>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![](/public/main3.png)
